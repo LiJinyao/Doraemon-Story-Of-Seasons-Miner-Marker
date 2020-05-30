@@ -1,4 +1,4 @@
-# 大雄的牧场物语挖矿标记工具 Doraemon Story Of Seasons Miner Makrer
+# 大雄的牧场物语挖矿标记工具 Doraemon Story Of Seasons Miner Marker
 
 ![Screen Shot](screenshot.jpg?raw=true "Screen Shot")
 
