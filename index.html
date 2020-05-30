@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        body {
+            min-width: 1200px;
+            background-color: #3d2f2c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gridContainer {
+            position: relative;
+        }
+
+        .grid {
+            width: 100%;
+        }
+
+        .tool {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .block {
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            cursor: pointer;
+            /* border: azure solid 1px; */
+        }
+
+        .block svg {
+            position: absolute;
+        }
+
+        .coordinate {
+            display: none;
+            text-align: center;
+            /* color: #F6D55C; */
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 12pt;
+        }
+
+        .blockBorder {
+            fill: none;
+        }
+
+        .block:hover {
+            stroke: #A5EDEB;
+            stroke-width: 4;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+            fill: none;
+            color: #A5EDEB;
+        }
+
+        .blockMarked,
+        .blockMarked:hover {
+            stroke: #F6D55C;
+            stroke-width: 4;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+            fill: none;
+            color: #F6D55C;
+        }
+
+        .block:hover .coordinate,
+        .blockMarked .coordinate {
+            display: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gridContainer">
+            <img class="grid" src="background.png" alt="">
+        </div>
+        <div class="tool">
+            <button class="reset">Clean</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
