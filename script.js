@@ -1,37 +1,3 @@
-// 矿物类型
-
-const minerals = [
-    {
-        name: "铜矿",
-        icon: ""
-    },
-    {
-        name: "铁矿",
-        icon: ""
-    },
-    {
-        name: "银矿",
-        icon: ""
-    },
-    {
-        name: "金矿",
-        icon: ""
-    },
-    {
-        name: "废铜烂铁",
-        icon: ""
-    },
-    {
-        name: "化石",
-        icon: ""
-    },
-    {
-        name: "宝石",
-        icon: ""
-    }
-]
-
-
 class App {
     constructor() {
         let size = 7
@@ -113,8 +79,6 @@ class App {
         console.log(x, y)
     }
 
-    // 方格尺寸 133 x 67
-
     run() {
         // mount reset
         document.querySelector(".reset").addEventListener("click", this.resetGrid)
@@ -125,8 +89,5 @@ class App {
     }
 }
 
-
-
 app = new App()
 app.run()
-
