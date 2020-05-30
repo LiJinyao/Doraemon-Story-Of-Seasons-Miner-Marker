@@ -11,6 +11,10 @@
             min-width: 1200px;
             background-color: #3d2f2c;
         }
+        .title {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: white;
+        }
 
         .container {
             max-width: 1200px;
@@ -29,7 +33,8 @@
 
         .tool {
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
         .block {
@@ -83,14 +88,20 @@
 
 <body>
     <div class="container">
+        <H1 class="title">大雄的牧场物语挖矿标记工具 Doraemon Story Of Seasons Miner Marker</H1>
         <div class="gridContainer">
             <img class="grid" src="background.png" alt="">
         </div>
+        
         <div class="tool">
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/LiJinyao/Doraemon-Story-Of-Seasons-Miner-Marker" data-icon="octicon-star" aria-label="Star LiJinyao/Doraemon-Story-Of-Seasons-Miner-Marker on GitHub">Star</a>
             <button class="reset">Clean</button>
         </div>
     </div>
     <script src="script.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 
 </html>
