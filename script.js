@@ -69,11 +69,6 @@ class App {
         }
     }
 
-    renderMinerals() {
-        minerals.map((m) => {
-            console.log(m)
-        })
-    }
     handlerBlockClick(target, x, y) {
         target.classList.toggle('blockMarked')
         console.log(x, y)
@@ -84,7 +79,6 @@ class App {
         document.querySelector(".reset").addEventListener("click", this.resetGrid)
         this.addSelector()
         this.renderkGrid()
-        this.renderMinerals()
         console.log("ready to go!")
     }
 }
