@@ -1,106 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mark Tool</title>
-    <style>
-        body {
-            min-width: 1200px;
-            background-color: #3d2f2c;
-        }
-        .title {
-            font-family: "Comic Sans MS", cursive, sans-serif;
-            color: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .gridContainer {
-            position: relative;
-        }
-
-        .grid {
-            width: 100%;
-        }
-
-        .tool {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .block {
-            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-            -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-            cursor: pointer;
-            /* border: azure solid 1px; */
-        }
-
-        .block svg {
-            position: absolute;
-        }
-
-        .coordinate {
-            display: none;
-            text-align: center;
-            /* color: #F6D55C; */
-            font-family: "Comic Sans MS", cursive, sans-serif;
-            font-size: 12pt;
-        }
-
-        .blockBorder {
-            fill: none;
-        }
-        
-        .block {
-            stroke-width: 4;
-            stroke-linejoin: round;
-            stroke-linecap: round;
-        }
-
-        .block:hover {
-            stroke: #A5EDEB;
-            color: #A5EDEB;
-            fill: none;
-        }
-
-        .blockMarked,
-        .blockMarked:hover {
-            stroke: #F6D55C;
-            color: #F6D55C;
-            fill: none;
-        }
-
-        .block:hover .coordinate,
-        .blockMarked .coordinate {
-            display: inherit;
-        }
-    </style>
+    <title>挖矿标记工具</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <H1 class="title">大雄的牧场物语挖矿标记工具 Doraemon Story Of Seasons Miner Marker</H1>
-        <div class="gridContainer">
-            <img class="grid" src="background.png" alt="">
-        </div>
-        
-        <div class="tool">
-            <!-- Place this tag where you want the button to render. -->
-            <a class="github-button" href="https://github.com/LiJinyao/Doraemon-Story-Of-Seasons-Miner-Marker" data-icon="octicon-star" aria-label="Star LiJinyao/Doraemon-Story-Of-Seasons-Miner-Marker on GitHub">Star</a>
-            <button class="reset">Clean</button>
+<div class="container">
+    <!-- 标题 -->
+    <H1 class="title">大雄的牧场物语挖矿标记工具 Doraemon Story Of Seasons Miner Marker</H1>
+
+    <!-- 地图 -->
+    <div class="gridContainer">
+        <img class="grid" src="background.png" alt="游戏背景图">
+    </div>
+
+    <!-- 弹出层菜单 -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-container">
+            <div class="menu-item kong" data-value="空">空</div>
+            <div class="menu-item" data-value="铜矿">铜矿</div>
+            <div class="menu-item" data-value="铁矿">铁矿</div>
+            <div class="menu-item" data-value="银矿">银矿</div>
+            <div class="menu-item" data-value="金矿">金矿</div>
+            <div class="menu-item" data-value="宝石">宝石</div>
+            <div class="menu-item" data-value="化石">化石</div>
+            <div class="menu-item" data-value="零件">零件</div>
+            <div class="menu-item" data-value="石头">石块</div>
         </div>
     </div>
-    <script src="script.js"></script>
-    <!-- Place this tag in your head or just before your close body tag. -->
+
+    <!-- 工具栏 -->
+    <div class="tool">
+        <!-- 在此处放置按钮渲染的标签 -->
+        <a class="github-button" href="https://github.com/LiJinyao/Doraemon-Story-Of-Seasons-Miner-Marker" data-icon="octicon-star" aria-label="在 GitHub 上给 LiJinyao/Doraemon-Story-Of-Seasons-Miner-Marker 点赞">点赞</a>
+        <button class="reset">重置标记</button>
+    </div>
+</div>
+<script src="script.js"></script>
+<!-- 在头部或 body 结束前放置此标签 -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 

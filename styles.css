@@ -1,0 +1,148 @@
+/* 定义颜色变量 */
+:root {
+    --main-bg-color: #3d2f2c;
+    --title-color: white;
+    --hover-color: #A5EDEB;
+    --marked-color: #F6D55C;
+    --overlay-bg-color: rgba(0, 0, 0, 0.5);
+    --menu-bg-color: white;
+    --menu-box-shadow: rgba(0, 0, 0, 0.2);
+    --menu-hover-bg-color: #9b9b9b;
+    --menu-hover-text-color: #333;
+    --kong-text-color: #ff4646;
+}
+
+/* 基本样式 */
+body {
+    min-width: 1200px;
+    background-color: var(--main-bg-color);
+}
+
+.title {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: var(--title-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 方块网格样式 */
+.gridContainer {
+    position: relative;
+}
+
+.grid {
+    width: 100%;
+}
+
+.tool {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.block {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    cursor: pointer;
+    /* border: azure solid 1px; */
+    position: relative; /* 添加相对定位 */
+}
+
+.block svg {
+    position: absolute;
+}
+
+/* 坐标和类型样式 */
+.coordinate {
+    display: none;
+    text-align: center;
+    /* color: #F6D55C; */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 12pt;
+}
+
+.blockBorder {
+    fill: none;
+}
+
+.block {
+    stroke-width: 4;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.block:hover {
+    stroke: var(--hover-color);
+    color: var(--hover-color);
+    fill: none;
+}
+
+.blockMarked,
+.blockMarked:hover {
+    stroke: var(--marked-color);
+    color: var(--marked-color);
+    fill: none;
+}
+
+.block:hover .coordinate,
+.blockMarked .coordinate {
+    display: inherit;
+}
+
+/* 弹出层菜单样式 */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-bg-color);
+    z-index: 1000;
+}
+
+.menu-container {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    position: absolute;
+    /*隐藏被裁剪的内容*/
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--menu-bg-color);
+    border-radius: 8px;
+    padding: 0px 0px; /* 修正 padding 值 */
+    box-shadow: 0 0 10px var(--menu-box-shadow);
+}
+
+.menu-item {
+    margin: 0;
+    padding: 6px 20px 6px 15px;
+    cursor: pointer;
+}
+.kong {
+    color: var(--kong-text-color);
+}
+/* 鼠标滑过菜单项的动效 */
+.menu-item:hover {
+    background-color: var(--menu-hover-bg-color);
+    color: var(--menu-hover-text-color);
+    transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
+}
+
+/* 方块信息样式 */
+.info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
