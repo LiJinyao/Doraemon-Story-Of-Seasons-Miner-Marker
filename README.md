@@ -1,7 +1,7 @@
 # 大雄的牧场物语挖矿标记工具
 Doraemon Story Of Seasons Miner Marker
 
-![Screen Shot](screenshot.jpg?raw=true "Screen Shot")
+![Screen Shot](img/thumbnail.png?raw=true "Screen Shot")
 ## 使用
 一个小工具，帮助你标记你想之后挖的矿的位置。<br>
 使用较新的Chrome打开 `index.html`. 单击添加标记，再次单击清除标记，点击Clean清除所有标记。<br>
