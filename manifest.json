@@ -1,0 +1,28 @@
+{
+  "name": "大雄的牧场物语挖矿标记工具",
+  "short_name": "大雄的牧场物语挖矿标记工具",
+  "description": "大雄的牧场物语挖矿标记工具",
+  "icons": [
+    {
+      "src": "img/appicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/appicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007aff",
+  "author": "Kailous",
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://rainforest-kailous.notion.site/"
+    }
+  ]
+}
